@@ -53,7 +53,7 @@ int main() {
       long long sum=-mu[gcd];
       if (sum==0)continue;
       for (int j=1;j<=Max/gcd;j++)sum=(sum*ksm(j,cnt[(j+1)*gcd-1]-cnt[j*gcd-1]))%mod;
-      ans=(ans+sum)%mod;
+      ans=((ans+sum)%mod+mod)%mod;
     }
     printf("Case #%d: %lld\n",++cas,ans);
   }
